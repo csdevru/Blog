@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[tags]
+(
+	[tag_id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [tag_name] NVARCHAR(50) NOT NULL
+)
