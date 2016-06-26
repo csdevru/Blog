@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[articles]
 (
-	[article_id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+	[article_id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT newsequentialid(), 
     [article_title] NVARCHAR(200) NOT NULL, 
     [article_text] NTEXT NOT NULL, 
     [customer_id] UNIQUEIDENTIFIER NOT NULL, 

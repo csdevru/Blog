@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="blogDataBase" Class="BlogDatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=193.124.117.93;Initial Catalog=blogDataBase;User ID=sa" SettingsObjectName="Logic.Properties.Settings" SettingsPropertyName="blogDataBaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.articles" Member="articles">
+    <Type Name="article">
+      <Column Name="article_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="article_title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="article_text" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="customer_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="article_create_date" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="rubric_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="article_articles_tag" Member="articles_tags" ThisKey="article_id" OtherKey="article_id" Type="articles_tag" />
+      <Association Name="article_comment" Member="comments" ThisKey="article_id" OtherKey="article_id" Type="comment" />
+      <Association Name="customer_article" Member="customer" ThisKey="customer_id" OtherKey="customer_id" Type="customer" IsForeignKey="true" />
+      <Association Name="rubric_article" Member="rubric" ThisKey="rubric_id" OtherKey="rubric_id" Type="rubric" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tags" Member="tags">
+    <Type Name="tag">
+      <Column Name="tag_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tag_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tag_articles_tag" Member="articles_tags" ThisKey="tag_id" OtherKey="tag_id" Type="articles_tag" />
+    </Type>
+  </Table>
+  <Table Name="dbo.articles_tags" Member="articles_tags">
+    <Type Name="articles_tag">
+      <Column Name="article_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="tag_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="article_articles_tag" Member="article" ThisKey="article_id" OtherKey="article_id" Type="article" IsForeignKey="true" />
+      <Association Name="tag_articles_tag" Member="tag" ThisKey="tag_id" OtherKey="tag_id" Type="tag" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.comments" Member="comments">
+    <Type Name="comment">
+      <Column Name="comment_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="article_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="customer_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="comment_text" Type="System.String" DbType="NVarChar(400) NOT NULL" CanBeNull="false" />
+      <Column Name="comment_create_date" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Association Name="article_comment" Member="article" ThisKey="article_id" OtherKey="article_id" Type="article" IsForeignKey="true" />
+      <Association Name="customer_comment" Member="customer" ThisKey="customer_id" OtherKey="customer_id" Type="customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.customers" Member="customers">
+    <Type Name="customer">
+      <Column Name="customer_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="customer_login" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="customer_password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="customer_article" Member="articles" ThisKey="customer_id" OtherKey="customer_id" Type="article" />
+      <Association Name="customer_comment" Member="comments" ThisKey="customer_id" OtherKey="customer_id" Type="comment" />
+      <Association Name="customer_customers_role" Member="customers_roles" ThisKey="customer_id" OtherKey="customer_id" Type="customers_role" />
+    </Type>
+  </Table>
+  <Table Name="dbo.customers_roles" Member="customers_roles">
+    <Type Name="customers_role">
+      <Column Name="customer_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="role_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="customer_customers_role" Member="customer" ThisKey="customer_id" OtherKey="customer_id" Type="customer" IsForeignKey="true" />
+      <Association Name="role_customers_role" Member="role" ThisKey="role_id" OtherKey="role_id" Type="role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.roles" Member="roles">
+    <Type Name="role">
+      <Column Name="role_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="role_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="role_customers_role" Member="customers_roles" ThisKey="role_id" OtherKey="role_id" Type="customers_role" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rubrics" Member="rubrics">
+    <Type Name="rubric">
+      <Column Name="rubric_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rubric_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="rubric_article" Member="articles" ThisKey="rubric_id" OtherKey="rubric_id" Type="article" />
+    </Type>
+  </Table>
+</Database>

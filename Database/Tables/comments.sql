@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[comments]
 (
-	[comment_id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+	[comment_id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT newsequentialid(),
 	[article_id] UNIQUEIDENTIFIER NOT NULL,
     [customer_id] UNIQUEIDENTIFIER NOT NULL, 
     [comment_text] NVARCHAR(400) NOT NULL, 
