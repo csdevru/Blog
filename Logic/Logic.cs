@@ -9,5 +9,10 @@ namespace Logic
         {
             return blogDB.articles;
         }
+
+        public static IQueryable<customer> GetCustomers()
+        {
+            return blogDB.customers;
+        }
     }
 }

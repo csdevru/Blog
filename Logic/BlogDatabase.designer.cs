@@ -51,7 +51,7 @@ namespace Logic
     #endregion
 		
 		public BlogDatabaseDataContext() : 
-				base(global::Logic.Properties.Settings.Default.blogDataBaseConnectionString, mappingSource)
+				base(global::Logic.Properties.Settings.Default.blogDataBaseConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

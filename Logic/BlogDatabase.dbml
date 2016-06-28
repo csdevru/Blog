@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="blogDataBase" Class="BlogDatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=193.124.117.93;Initial Catalog=blogDataBase;User ID=sa" SettingsObjectName="Logic.Properties.Settings" SettingsPropertyName="blogDataBaseConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=193.124.117.93;Initial Catalog=blogDataBase;Persist Security Info=True;User ID=sa" SettingsObjectName="Logic.Properties.Settings" SettingsPropertyName="blogDataBaseConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.articles" Member="articles">
     <Type Name="article">
       <Column Name="article_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

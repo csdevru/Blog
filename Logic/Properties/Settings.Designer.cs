@@ -33,5 +33,16 @@ namespace Logic.Properties {
                 return ((string)(this["blogDataBaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=193.124.117.93;Initial Catalog=blogDataBase;Persist Security Info=Tru" +
+            "e;User ID=sa;Password=gasdevS")]
+        public string blogDataBaseConnectionString1 {
+            get {
+                return ((string)(this["blogDataBaseConnectionString1"]));
+            }
+        }
     }
 }

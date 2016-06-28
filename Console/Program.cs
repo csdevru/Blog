@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Logic;
-
-namespace Console
+﻿namespace Console
 {
     class Program
     {
         static void Main(string[] args)
         {
-            foreach (var a in Logic.Logic.GetArticles())
+            foreach (var c in Logic.Logic.GetCustomers())
             {
-                System.Console.WriteLine($"{a.article_title}: {a.article_text}");
+                System.Console.WriteLine($"{c.customer_login}: {c.customer_password}");
             }
             System.Console.ReadKey();
         }
