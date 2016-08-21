@@ -1,2 +1,41 @@
-﻿body {
+﻿body{
+    color:black;
+    text-align:center;
+}
+
+.block {
+    width:auto;
+}
+
+.about{
+    background-color:#16a3b5;
+}
+
+.services{
+    background-color:#292b2a;
+}
+
+.team{
+    background-color:#9d9f9e;
+}
+
+.projects{
+    background-color:#292b2a;
+}
+
+.contacts{
+    background-color:#2f3030;
+}
+
+.bottom-blue-line{
+    background-color:#16a3b5;
+
+}
+
+ul{
+    margin:0px;
+}
+
+p{
+    margin:0px;
 }
