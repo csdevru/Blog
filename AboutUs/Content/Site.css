@@ -1,91 +1,79 @@
-﻿body {
-    color:yellow;
-    background-color: red;
+﻿/*Variables*/
+/*End variables*/
+@font-face {
+  font-family: PFBEAUSANSPRO;
+  src: url(../fonts/PFBEAUSANSPRO-LIGHTITAL/PFBEAUSANSPRO-REG.TTF);
 }
-
+body {
+  color: yellow;
+  background-color: red;
+  font-family: PFBEAUSANSPRO;
+}
 .navbar {
-    background-color: #2f3030;
-    border-bottom-width: 0px;
+  background-color: #2f3030;
+  border-bottom-width: 0px;
 }
-
 #nav-bar-collapse ul li a:hover {
-    color:#16a3b5;
+  color: #16a3b5;
 }
-
 #nav-bar-collapse ul li a:target {
-    color:#16a3b5;
+  color: #16a3b5;
 }
-
 .max-height {
-    height:100%;
+  height: 100%;
 }
-
 .vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
 }
-
 .brand-image {
-    border-radius:50%;
+  border-radius: 50%;
 }
-
 #about {
-    background-color:#16a3b5;
-    margin-top:50px;
-    height:400px;
-    color: #2f3030;
-    padding-top: 100px;
+  background-color: #16a3b5;
+  margin-top: 50px;
+  height: 400px;
+  color: #2f3030;
+  padding-top: 100px;
 }
-
 .company-name {
-    font-size:55px;
-    letter-spacing: 7px;
-    font-weight: 700;
-    /*padding-top: 100px;*/
-    line-height: 90%;
-    text-shadow: 4px 4px 16px #2f3030;
+  font-size: 55px;
+  letter-spacing: 7px;
+  font-weight: 700;
+  /*padding-top: 100px;*/
+  line-height: 90%;
+  text-shadow: 4px 4px 16px #2f3030;
 }
-
 #word-dev {
-    /*display:inline-block;*/
-    float: left;
+  /*display:inline-block;*/
+  float: left;
 }
-
 .text-about {
-    display: inline-block;
-    width: 450px;
-    padding: 3px;
-    background-color:white;
-    border-radius: 10px;
-    margin-left: 20px;
+  display: inline-block;
+  width: 450px;
+  padding: 3px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 20px;
 }
-
-#text-about p {
-    font-size:12px;
+#services {
+  background-color: #292b2a;
+  height: 250px;
 }
-
-#services{
-    background-color:#292b2a;
-    height:250px;
+#team {
+  background-color: #9d9f9e;
+  height: 250px;
 }
-
-#team{
-    background-color:#9d9f9e;
-    height:250px;
+#projects {
+  background-color: #292b2a;
+  height: 250px;
 }
-
-#projects{
-    background-color:#292b2a;
-    height:250px;
-}
-
 #contacts {
-    background-color:#2f3030;
-    height:250px;
+  background-color: #2f3030;
+  height: 250px;
 }
-
-.bottom-blue-line{
-    background-color:#16a3b5;
-    height:25px;
+.bottom-blue-line {
+  background-color: #16a3b5;
+  height: 25px;
 }

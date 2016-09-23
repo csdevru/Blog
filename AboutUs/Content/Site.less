@@ -1,0 +1,102 @@
+﻿/*Variables*/
+
+@light-gray: #9d9f9e;
+@gray: #2f3030;
+@dark-gray: #292b2a;
+@blue: #16a3b5;
+
+/*End variables*/
+
+@font-face {
+    font-family: PFBEAUSANSPRO;
+    src: url(../fonts//PFBEAUSANSPRO-LIGHTITAL/PFBEAUSANSPRO-REG.TTF);
+}
+
+body {
+    color:yellow;
+    background-color: red;
+    font-family: PFBEAUSANSPRO;
+}
+
+.navbar {
+    background-color: @gray;
+    border-bottom-width: 0px;
+}
+
+#nav-bar-collapse ul li a:hover {
+    color: @blue;
+}
+
+#nav-bar-collapse ul li a:target {
+    color: @blue;
+}
+
+.max-height {
+    height:100%;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.brand-image {
+    border-radius:50%;
+}
+
+#about {
+    background-color: @blue;
+    margin-top:50px;
+    height:400px;
+    color: @gray;
+    padding-top: 100px;
+}
+
+.company-name {
+    font-size:55px;
+    letter-spacing: 7px;
+    font-weight: 700;
+    /*padding-top: 100px;*/
+    line-height: 90%;
+    text-shadow: 4px 4px 16px @gray;
+}
+
+#word-dev {
+    /*display:inline-block;*/
+    float: left;
+}
+
+.text-about {
+    display: inline-block;
+    width: 450px;
+    padding: 3px;
+    background-color:white;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+#services{
+    background-color: @dark-gray;
+    height:250px;
+}
+
+#team{
+    background-color: @light-gray;
+    height:250px;
+}
+
+#projects{
+    background-color: @dark-gray;
+    height:250px;
+}
+
+#contacts {
+    background-color: @gray;
+    height:250px;
+}
+
+.bottom-blue-line{
+    background-color: @blue;
+    height:25px;
+}
