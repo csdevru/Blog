@@ -81,7 +81,10 @@
     </Content>
     <Content Include="Content\_Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\Aidarchik.png" />
     <Content Include="Images\CSDev.jpg" />
+    <Content Include="Images\Kolosov.png" />
+    <Content Include="Images\Zharinov.png" />
     <Content Include="Index_Alternative.html" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

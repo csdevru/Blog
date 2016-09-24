@@ -4,7 +4,9 @@
 @gray: #2f3030;
 @dark-gray: #292b2a;
 @blue: #16a3b5;
+@shadow-color: #1f221f;
 
+@border-raduis: 9px;
 /*End variables*/
 
 @font-face {
@@ -21,28 +23,15 @@ body {
 .navbar {
     background-color: @gray;
     border-bottom-width: 0px;
-}
 
-#nav-bar-collapse ul li a:hover {
-    color: @blue;
-}
+    #nav-bar-collapse ul li a:hover {
+        color: @blue;
+    }
 
-#nav-bar-collapse ul li a:target {
-    color: @blue;
-}
+    #nav-bar-collapse ul li a:target {
+        color: @blue;
+    }
 
-.max-height {
-    height:100%;
-}
-
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
-
-.brand-image {
-    border-radius:50%;
 }
 
 #about {
@@ -51,52 +40,128 @@ body {
     height:400px;
     color: @gray;
     padding-top: 100px;
-}
 
-.company-name {
-    font-size:55px;
-    letter-spacing: 7px;
-    font-weight: 700;
-    /*padding-top: 100px;*/
-    line-height: 90%;
-    text-shadow: 4px 4px 16px @gray;
-}
+    .word-dev {
+        float: left;
+    }
 
-#word-dev {
-    /*display:inline-block;*/
-    float: left;
-}
+    .company-name {
+        font-size:55px;
+        letter-spacing: 7px;
+        font-weight: 700;
+        line-height: 90%;
+        text-shadow: 4px 4px 16px @gray;
+    }
 
-.text-about {
-    display: inline-block;
-    width: 450px;
-    padding: 3px;
-    background-color:white;
-    border-radius: 10px;
-    margin-left: 20px;
+    .text-about {
+        display: inline-block;
+        width: 450px;
+        padding: 3px;
+        background-color:white;
+        border-radius: @border-raduis;
+        margin-left: 20px;
+    }
+
 }
 
 #services{
     background-color: @dark-gray;
+    color: @blue;
     height:250px;
+    padding-top: 40px;
+
+    #services-text {
+        border: 2px solid @blue;
+        border-radius: @border-raduis;
+        width: 90px;
+
+        p {
+            margin-bottom: 0px;
+        }
+    }
 }
 
 #team{
     background-color: @light-gray;
-    height:250px;
+    color: @dark-gray;
+    height:200px;
+    padding-top: 15px;
+    font-weight: bold;
+
+    #team-text {
+        border: 2px solid @dark-gray;
+        border-radius: @border-raduis;
+        width: 70px;
+
+        p {
+            margin-bottom: 0px;
+        }
+    }
+
+    .team-faces {
+        margin-top: 15px;
+
+        .team-face {
+            width: 100px;
+            height: 100px;
+        }
+    }
 }
 
 #projects{
     background-color: @dark-gray;
+    color:@light-gray;
     height:250px;
+    padding-top: 20px;
+    box-shadow:inset 0px -10px 30px @shadow-color;
+
+    #projects-text {
+        border: 2px solid @light-gray;
+        border-radius: @border-raduis;
+        width: 90px;
+
+        p {
+            margin-bottom: 0px;
+        }
+    }
 }
 
 #contacts {
     background-color: @gray;
-    height:250px;
+    color: @blue;
+    height: 150px;
+    padding-top: 50px;
+
+    #contacts-text-company {
+        height: 60px;
+        border-right: 2px solid @light-gray;
+        font-weight: bold;
+        padding-right: 35px;
+    }
+
+    #contacts-text-moar {
+        height: 60px;
+        padding-left: 35px;
+
+        span {
+            padding: 0px 10px;
+        }
+    }
+
+    p {
+        margin-top: 16px;
+        font-size: 18px;
+    }
 }
 
 .bottom-blue-line{
     background-color: @blue;
-    height:25px;
+    color: @gray;
+    height:35px;
+
+    p {
+        margin-bottom: 0px;
+        margin-top: 5px;
+        font-weight: bold;
+    }
 }
